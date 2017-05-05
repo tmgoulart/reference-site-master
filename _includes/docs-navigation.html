@@ -1,0 +1,41 @@
+  <!----- Docs Navigation ----->
+  <div class="col-md-3">
+  
+    <div class="docs-navigation">
+      <h2><a onclick="toggleMenu(this, '#getting-started');"><i class="fa fa-caret-right"></i> Getting Started</a></h2>
+      <ul id="getting-started" {% unless page.url contains '/docs/getting-started' %}class="hidden"{% endunless %}>
+        <li {% if page.url contains '/docs/getting-started/index' %}class="active"{% endif %}>
+          <a href="/docs/getting-started/index.html">First Steps</a></li>
+        <li {% if page.url contains '/docs/getting-started/writing-guidelines' %}class="active"{% endif %}>
+          <a href="/docs/getting-started/writing-guidelines.html">Writing Guidelines</a></li>
+        <li {% if page.url contains'/docs/getting-started/markdown-guidelines' %}class="active"{% endif %}>
+          <a href="/docs/getting-started/markdown-guidelines.html">Markdown Guidelines</a></li>
+        <li {% if page.url contains'/docs/getting-started/page-layouts' %}class="active"{% endif %}>
+          <a href="/docs/getting-started/page-layouts.html">Page Layouts</a></li>
+      </ul>
+      <h2><a onclick="toggleMenu(this, '#base-styles');"><i class="fa fa-caret-right"></i> Base Styles</a></h2>
+      <ul id="base-styles" {% unless page.url contains '/base-styles' %}class="hidden"{% endunless %}>
+        <li {% if page.url contains '/docs/base-styles/index' %}class="active"{% endif %}>
+          <a href="/docs/base-styles/index.html">Overview</a></li>
+        <li {% if page.url contains '/docs/base-styles/typography' %}class="active"{% endif %}>
+          <a href="/docs/base-styles/typography.html">Typography</a></li>
+        <li {% if page.url contains '/docs/base-styles/buttons' %}class="active"{% endif %}>
+          <a href="/docs/base-styles/buttons.html">Buttons</a></li>
+        <li {% if page.url contains '/docs/base-styles/colors' %}class="active"{% endif %}>
+          <a href="/docs/base-styles/colors.html">Colors</a></li>
+        <li {% if page.url contains '/docs/base-styles/icons' %}class="active"{% endif %}>
+            <a href="/docs/base-styles/icons.html">Icons</a></li>
+        <li {% if page.url contains '/docs/base-styles/images' %}class="active"{% endif %}>
+            <a href="/docs/base-styles/images.html">Images</a></li>
+        <li {% if page.url contains '/docs/base-styles/project-graphics' %}class="active"{% endif %}>
+            <a href="/docs/base-styles/project-graphics.html">Project Graphics</a></li>
+      </ul>
+      <h2><a onclick="toggleMenu(this, '#advanced');"><i class="fa fa-caret-right"></i> Advanced</a></h2>
+      <ul id="advanced" {% unless page.url contains '/advanced' %}class="hidden"{% endunless %}>
+        <li {% if page.url contains '/docs/advanced/upgrades' %}class="active"{% endif %}>
+          <a href="/docs/advanced/upgrades.html">Upgrades</a></li>
+        <li {% if page.url contains '/docs/advanced/changelog' %}class="active"{% endif %}>
+          <a href="/docs/advanced/changelog.html">Changelog</a></li>
+      </ul>
+    </div>
+  </div><!-- END col-md-3 docs-navigation -->

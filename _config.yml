@@ -1,0 +1,99 @@
+# ----------------------------------------------------------------------------------------------------------------------
+# Site customization
+# ----------------------------------------------------------------------------------------------------------------------
+# Any variable here is referenced in layouts/pages as {{site.XXX}} so something like {{site.googleId}}
+# ----------------------------------------------------------------------------------------------------------------------
+
+id: wmt reference
+name: Walmart Technology Reference Site
+domain: reference.walmart.com
+url: http://reference.walmart.com
+logo: /assets/img/logo.png
+description: "Reference Example for all Developer Sites"
+twitterId: #
+googleId: #
+source_url: https://gecgithub01.walmart.com/devtools/reference-site/tree/master/
+
+navigation:
+ - title: THIS
+   url: /about.html
+   context: /about
+ - title: IS
+   url: /docs/getting-started/index.html
+   context: /docs/
+ - title: PROJECTS
+   url: /projects/index.html
+   context: /projects
+   id: projects
+   subnavigation:
+      - title: Overview
+        url: /projects/index.html
+      - title: Project 1
+        url: /projects/project1.html
+      - title: Project 2
+        url: /projects/project2.html
+      - title: Project 3
+        url: /projects/project3.html
+ - title: BLOG
+   url: /blog/index.html
+   context: /blog/
+ - title: CONTACT US
+   url: /contact-us.html
+   context: /contact-us
+
+projects:
+ - title: Overview
+   url: /projects/index.html
+ - title: Project 1
+   url: /projects/project1.html
+ - title: Project 2
+   url: /projects/project2.html
+ - title: Project 3
+   url: /projects/project3.html
+
+
+defaults:
+  -   
+   scope:
+     type: pages
+   values:
+     permalink: /:path/:basename:output_ext
+  -   
+   scope:
+     type: posts
+   values:
+     permalink: /blog/:year-:month-:day-:title.html
+
+excerpt_separator: <!--more-->
+
+
+authors:
+  team:
+    name: The Team
+    web: /about
+  aloney:
+    name: Alison Loney
+    web: http://devtools.walmart.com/about-us.html#aloney
+  mmoser:
+    name: Manfred Moser
+    web: http://devtools.walmart.com/about-us.html#mmoser
+  jvanzyl:
+    name: Jason van Zyl
+    web: http://devtools.walmart.com/about-us.html#jvanzyl
+
+   
+# -------
+# Jekyll 
+# -------
+markdown: kramdown
+kramdown: 
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+exclude: 
+  - "*.sh"
+  - "wmt-release*"
+
+
+
